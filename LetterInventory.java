@@ -39,4 +39,14 @@ public class LetterInventory {
     return inventory[Character.toLowerCase(letter) - 'a'];  
   }
 
+  // Returns an alphabetically sorted string of the input characters
+  public String toString(){
+    String result = "[";
+    for (int i = 0; i < INVENTORY_SIZE; i++) {
+      for (int j = 0; j < inventory[i]; j++) 
+        result += (char)('a' + i);  
+    }
+    return result + "]";
+  }
+
 }
