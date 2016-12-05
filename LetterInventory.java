@@ -23,4 +23,9 @@ public class LetterInventory {
     return size;
   }
 
+  // Returns the original input string
+  public string getOriginal() {
+    return initialInput;
+  }
+
 }
