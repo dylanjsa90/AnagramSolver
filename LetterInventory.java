@@ -13,13 +13,14 @@ public class LetterInventory {
     data = data.toLowerCase();
     for (int i = 0; i < data.length(); i++) {
       if (Character.isLetter(data.charAt(i))) {
-        inventory[data.charAt(i) - 97]++;
-        // if (data.charAt(i) == "q") {
-        //   inventory['u' - 'a']
-        // }
+        inventory[data.charAt(i) - 97]++;  
       }
     }
   }
 
+  // Returns the number of characters in the inventory
+  public int size() {
+    return size;
+  }
 
 }
