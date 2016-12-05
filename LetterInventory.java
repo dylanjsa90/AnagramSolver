@@ -28,4 +28,9 @@ public class LetterInventory {
     return initialInput;
   }
 
+  // Returns a whether the inventory is empty (true) or not (false)
+  public boolean isEmpty() {
+    return size == 0;
+  }
+
 }
