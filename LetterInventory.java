@@ -33,4 +33,10 @@ public class LetterInventory {
     return size == 0;
   }
 
+  public int get(char letter) {
+    if (!Character.isLetter(letter))
+      throw new IllegalArgumentException("Is not a letter" + letter);
+    return inventory[Character.toLowerCase(letter) - 'a'];  
+  }
+
 }
