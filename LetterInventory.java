@@ -1,5 +1,4 @@
 
-
 public class LetterInventory {
   private int size;
   private int[] inventory;
@@ -35,7 +34,7 @@ public class LetterInventory {
 
   public int get(char letter) {
     if (!Character.isLetter(letter))
-      throw new IllegalArgumentException("Is not a letter" + letter);
+      throw new IllegalArgumentException("Is not a letter: " + letter);
     return inventory[Character.toLowerCase(letter) - 'a'];  
   }
 
@@ -47,6 +46,13 @@ public class LetterInventory {
         result += (char)('a' + i);  
     }
     return result + "]";
+  }
+
+  public void set(char letter, int value) {
+    if (!Character.isLetter(letter) || value < 0)
+      throw new IllegalArgumentException("Not a valid letter: " + letter + ", Or not valid value: " + value);
+    size += value - inventory[Character.toLowerCase(letter) - 'a'];
+    inventory[Character.toLowerCase(letter) - 'a'] = value;
   }
 
 }
